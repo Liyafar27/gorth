@@ -12,7 +12,6 @@ import 'package:flutter/widgets.dart';
 class Assets {
   const Assets._();
 
-  static const AssetGenImage a1 = AssetGenImage('assets/1.png');
   static const AssetGenImage a10 = AssetGenImage('assets/10.jpeg');
   static const AssetGenImage a11 = AssetGenImage('assets/11.jpeg');
   static const AssetGenImage a12 = AssetGenImage('assets/12.jpeg');
@@ -71,6 +70,7 @@ class Assets {
   static const AssetGenImage f2 = AssetGenImage('assets/f2.png');
   static const AssetGenImage f3 = AssetGenImage('assets/f3.png');
   static const AssetGenImage f4 = AssetGenImage('assets/f4.png');
+  static const AssetGenImage f44 = AssetGenImage('assets/f44.png');
   static const AssetGenImage f5 = AssetGenImage('assets/f5.png');
   static const AssetGenImage f6 = AssetGenImage('assets/f6.png');
   static const String tg = 'assets/tg.svg';
@@ -78,7 +78,6 @@ class Assets {
 
   /// List of all assets
   static List<dynamic> get values => [
-    a1,
     a10,
     a11,
     a12,
@@ -137,6 +136,7 @@ class Assets {
     f2,
     f3,
     f4,
+    f44,
     f5,
     f6,
     tg,

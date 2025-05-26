@@ -55,29 +55,30 @@ class _GradientBackgroundState extends State<GradientBackground> {
               child: Stack(
                 children: [
                   Transform.scale(
+                    scale:widget.screenWidth < 600?1.0: 1.13, // увеличиваем немного
+                    child: Transform.translate(
+                      offset: Offset(_offset.dx * 0.02, _offset.dy * 0.02),
+                      child: SizedBox.expand(child: Image.asset(Assets.f44.path, fit:widget.screenWidth < 600
+                          ?BoxFit.fitHeight:BoxFit.fill,          height: widget.screenWidth < 600 ? 400+widget
+                          .screenWidth/10:450+widget.screenWidth/10,
+                      )),
+                    ),
+                  ),
+                  Transform.scale(
                     scale: widget.screenWidth < 600?1.0:1.15, // увеличиваем немного
                     child: Transform.translate(
-                      offset: Offset(_offset.dx * 0.06, _offset.dy * 0.06),
+                      offset: Offset(_offset.dx * 0.05, _offset.dy * 0.05),
                       child: SizedBox.expand(child: Image.asset(Assets.f6.path, fit: widget.screenWidth < 600
                           ?BoxFit.fitHeight:BoxFit.cover,        height: widget.screenWidth < 600 ? 400+widget
                           .screenWidth/10:450+widget.screenWidth/10,
                       )),
                     ),
                   ),
-                  Transform.scale(
-                    scale:widget.screenWidth < 600?1.0: 1.13, // увеличиваем немного
-                    child: Transform.translate(
-                      offset: Offset(_offset.dx * 0.03, _offset.dy * 0.03),
-                      child: SizedBox.expand(child: Image.asset(Assets.f4.path, fit:widget.screenWidth < 600
-                          ?BoxFit.fitHeight:BoxFit.cover,          height: widget.screenWidth < 600 ? 400+widget
-                          .screenWidth/10:450+widget.screenWidth/10,
-                      )),
-                    ),
-                  ),
+
                   Transform.scale(
                     scale:widget.screenWidth < 600?1.0: 1.22, // увеличиваем немного
                     child: Transform.translate(
-                      offset: Offset(_offset.dx * 0.02, _offset.dy * 0.02),
+                      offset: Offset(_offset.dx * 0.08, _offset.dy * 0.08),
                       child: SizedBox.expand(child: Image.asset(Assets.f5.path,  fit:widget.screenWidth < 600
                           ?BoxFit.fitHeight:BoxFit.cover,       height: widget
                           .screenWidth < 600 ? 400+widget.screenWidth/10:450+widget.screenWidth/10,
