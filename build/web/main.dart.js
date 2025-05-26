@@ -71693,7 +71693,7 @@ this.a.d=s.gb5(s).P(0,this.c)},
 $S:0}
 A.GF.prototype={
 N(a){var s=null
-return new A.wj(B.BN,"Flutter Demo",A.qZ(s,A.akS(B.V,s,s,B.G0),s),!1,s)}}
+return new A.wj(B.BN,"$GORTH",A.qZ(s,A.akS(B.V,s,s,B.G0),s),!1,s)}}
 A.FG.prototype={
 N(a){var s=null,r=A.bB(a,s,t.w).w.a.a,q=t.A,p=new A.bo(s,q),o=r<800?r/25:r/40,n=t.E
 o=A.iH(A.b([A.yr(A.dM("$GORTH by Matt Furie",s,A.d4(s,s,B.l,s,s,s,s,s,"Adigiana",s,s,o,s,s,s,s,s,!0,s,s,s,s,s,A.b([new A.cO(A.aG(153,B.i.C()>>>16&255,B.i.C()>>>8&255,B.i.C()&255),new A.i(2,2),4)],t.kO),s,s)),new A.YH(new A.YG(),p),s),A.yr(B.Pl,new A.YI(),s),A.yr(B.Pk,new A.YJ(),s),A.yr(B.Pn,new A.YK(),s)],n),B.ap,B.as,B.an)
