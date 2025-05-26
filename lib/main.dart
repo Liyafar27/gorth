@@ -71,7 +71,7 @@ class HomePage extends StatelessWidget {
               child: const Text('Tg', style: TextStyle(fontFamily: 'Adigiana', fontSize: 25, color: Colors.white)),
             ),
             TextButton(
-              onPressed: () => openUrl('6CrzZFNYccQ5DQL8UqKuwNowh3zsWD5RNTs1GZbApump'),
+              onPressed: () => openUrl('https://dexscreener.com/solana/25isMnRfTDomCkRydjgiCrRwET5wRb3pxbuRn89Nr73L'),
               child: const Text('Dex', style: TextStyle(fontFamily: 'Adigiana', fontSize: 25, color: Colors.white)),
             ),
           ],
