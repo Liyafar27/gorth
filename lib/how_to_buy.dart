@@ -9,6 +9,7 @@ class HowToBuySection extends StatefulWidget {
   State<HowToBuySection> createState() => _HowToBuySectionState();
 }
 
+
 class _HowToBuySectionState extends State<HowToBuySection> {
   final Color accent = const Color(0xFF00FFB2);
   final List<bool> expanded = List.generate(5, (_) => false);
