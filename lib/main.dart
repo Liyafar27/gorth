@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       title: '\$GORTH',
-      theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)),
       home: const HomePage(),
     );
   }
