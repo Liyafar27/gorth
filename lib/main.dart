@@ -57,14 +57,14 @@ class HomePage extends StatelessWidget {
                 '\$GORTH by Matt Furie',
                 style: TextStyle(
                   fontFamily: 'Adigiana',
-                  fontSize: screenWidth < 800 ?screenWidth / 25:screenWidth /
-                      40,                  color: Colors.white,
+                  fontSize: screenWidth < 800 ? screenWidth / 25 : screenWidth / 40,
+                  color: Colors.white,
                   shadows: [Shadow(color: Colors.black.withOpacity(0.6), offset: Offset(2, 2), blurRadius: 4)],
                 ),
               ),
             ),
             TextButton(
-              onPressed: () => openUrl("https://x.com/i/communities/1923786151607091641"),
+              onPressed: () => openUrl("https://x.com/gorth_on_sol"),
               child: const Text('𝕏', style: TextStyle(fontFamily: 'Adigiana', fontSize: 25, color: Colors.white)),
             ),
             TextButton(
