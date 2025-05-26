@@ -3,10 +3,7 @@ import 'package:flutter/material.dart';
 class ZoomableImage extends StatelessWidget {
   final ImageProvider imageProvider;
 
-  const ZoomableImage({
-    Key? key,
-    required this.imageProvider,
-  }) : super(key: key);
+  const ZoomableImage({Key? key, required this.imageProvider}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,19 +15,10 @@ class ZoomableImage extends StatelessWidget {
         height: screenWidth / 4,
         width: screenWidth / 4,
         decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black,
-              blurRadius: 20,
-              offset: Offset(8, -5),
-            ),
-          ],
+          boxShadow: [BoxShadow(color: Colors.black, blurRadius: 20, offset: Offset(8, -5))],
           borderRadius: BorderRadius.circular(24),
           border: Border.all(color: Colors.white, width: 4),
-          image: DecorationImage(
-            image: imageProvider,
-            fit: BoxFit.contain,
-          ),
+          image: DecorationImage(image: imageProvider, fit: BoxFit.contain),
         ),
       ),
     );
@@ -39,19 +27,15 @@ class ZoomableImage extends StatelessWidget {
   void _showZoomDialog(BuildContext context) {
     showDialog(
       context: context,
-      builder: (_) => Dialog(
-        backgroundColor: Colors.transparent,
-        insetPadding: EdgeInsets.all(20),
-        child: GestureDetector(
-          onTap: () => Navigator.of(context).pop(),
-          child: InteractiveViewer(
-            child: Image(
-              image: imageProvider,
-              fit: BoxFit.contain,
+      builder:
+          (_) => Dialog(
+            backgroundColor: Colors.transparent,
+            insetPadding: EdgeInsets.all(20),
+            child: GestureDetector(
+              onTap: () => Navigator.of(context).pop(),
+              child: InteractiveViewer(child: Image(image: imageProvider, fit: BoxFit.contain)),
             ),
           ),
-        ),
-      ),
     );
   }
 }
