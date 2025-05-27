@@ -27,7 +27,7 @@ class _GradientBackgroundState extends State<GradientBackground> {
         });
       },
       child: Container(
-        height: widget.screenWidth < 600 ? 400+widget.screenWidth/10:450+widget.screenWidth/10,
+        height: widget.screenWidth < 600 ? 400 + widget.screenWidth / 10 : 450 + widget.screenWidth / 10,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -55,34 +55,46 @@ class _GradientBackgroundState extends State<GradientBackground> {
               child: Stack(
                 children: [
                   Transform.scale(
-                    scale:widget.screenWidth < 600?1.0: 1.13, // увеличиваем немного
+                    scale: widget.screenWidth < 600 ? 1.0 : 1.13, // увеличиваем немного
                     child: Transform.translate(
                       offset: Offset(_offset.dx * 0.02, _offset.dy * 0.02),
-                      child: SizedBox.expand(child: Image.asset(Assets.f44.path, fit:widget.screenWidth < 600
-                          ?BoxFit.fitHeight:BoxFit.fill,          height: widget.screenWidth < 600 ? 400+widget
-                          .screenWidth/10:450+widget.screenWidth/10,
-                      )),
+                      child: SizedBox.expand(
+                        child: Image.asset(
+                          Assets.f44.path,
+                          fit: widget.screenWidth < 600 ? BoxFit.fitHeight : BoxFit.fill,
+                          height:
+                              widget.screenWidth < 600 ? 400 + widget.screenWidth / 10 : 450 + widget.screenWidth / 10,
+                        ),
+                      ),
                     ),
                   ),
                   Transform.scale(
-                    scale: widget.screenWidth < 600?1.0:1.15, // увеличиваем немного
+                    scale: widget.screenWidth < 600 ? 1.0 : 1.15, // увеличиваем немного
                     child: Transform.translate(
                       offset: Offset(_offset.dx * 0.05, _offset.dy * 0.05),
-                      child: SizedBox.expand(child: Image.asset(Assets.f6.path, fit: widget.screenWidth < 600
-                          ?BoxFit.fitHeight:BoxFit.cover,        height: widget.screenWidth < 600 ? 400+widget
-                          .screenWidth/10:450+widget.screenWidth/10,
-                      )),
+                      child: SizedBox.expand(
+                        child: Image.asset(
+                          Assets.f6.path,
+                          fit: widget.screenWidth < 600 ? BoxFit.fitHeight : BoxFit.cover,
+                          height:
+                              widget.screenWidth < 600 ? 400 + widget.screenWidth / 10 : 450 + widget.screenWidth / 10,
+                        ),
+                      ),
                     ),
                   ),
 
                   Transform.scale(
-                    scale:widget.screenWidth < 600?1.0: 1.22, // увеличиваем немного
+                    scale: widget.screenWidth < 600 ? 1.0 : 1.22, // увеличиваем немного
                     child: Transform.translate(
                       offset: Offset(_offset.dx * 0.08, _offset.dy * 0.08),
-                      child: SizedBox.expand(child: Image.asset(Assets.f5.path,  fit:widget.screenWidth < 600
-                          ?BoxFit.fitHeight:BoxFit.cover,       height: widget
-                          .screenWidth < 600 ? 400+widget.screenWidth/10:450+widget.screenWidth/10,
-                      )),
+                      child: SizedBox.expand(
+                        child: Image.asset(
+                          Assets.f5.path,
+                          fit: widget.screenWidth < 600 ? BoxFit.fitHeight : BoxFit.cover,
+                          height:
+                              widget.screenWidth < 600 ? 400 + widget.screenWidth / 10 : 450 + widget.screenWidth / 10,
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -104,8 +116,7 @@ class _GradientBackgroundState extends State<GradientBackground> {
                               'Gorth',
                               style: TextStyle(
                                 fontFamily: 'Genty',
-                                fontSize: widget.screenWidth < 800 ? widget.screenWidth / 5 : widget.screenWidth /
-                                    9,
+                                fontSize: widget.screenWidth < 800 ? widget.screenWidth / 5 : widget.screenWidth / 9,
                                 foreground:
                                     Paint()
                                       ..style = PaintingStyle.stroke
@@ -113,14 +124,14 @@ class _GradientBackgroundState extends State<GradientBackground> {
                                       ..color = Colors.cyanAccent,
                                 shadows: [
                                   Shadow(color: Colors.black.withOpacity(0.9), offset: Offset(4, 4), blurRadius: 40),
-                                ],),
+                                ],
+                              ),
                             ),
                             Text(
                               'Gorth',
                               style: TextStyle(
                                 fontFamily: 'Genty',
-                                fontSize: widget.screenWidth < 800 ? widget.screenWidth / 5 : widget.screenWidth /
-                                   9,
+                                fontSize: widget.screenWidth < 800 ? widget.screenWidth / 5 : widget.screenWidth / 9,
                                 color: Colors.redAccent.shade400,
                                 shadows: [
                                   Shadow(color: Colors.black.withOpacity(0.9), offset: Offset(4, 4), blurRadius: 10),
@@ -135,22 +146,22 @@ class _GradientBackgroundState extends State<GradientBackground> {
                               'on SOL',
                               style: TextStyle(
                                 fontFamily: 'Genty',
-                                fontSize: widget.screenWidth < 800 ? widget.screenWidth / 7 : widget.screenWidth /
-                                   11,                                  foreground:
+                                fontSize: widget.screenWidth < 800 ? widget.screenWidth / 7 : widget.screenWidth / 11,
+                                foreground:
                                     Paint()
                                       ..style = PaintingStyle.stroke
                                       ..strokeWidth = 4
                                       ..color = Colors.cyanAccent,
                                 shadows: [
                                   Shadow(color: Colors.black.withOpacity(0.9), offset: Offset(4, 4), blurRadius: 40),
-                                ],),
+                                ],
+                              ),
                             ),
                             Text(
                               'on SOL',
                               style: TextStyle(
                                 fontFamily: 'Genty',
-                                fontSize: widget.screenWidth < 800 ? widget.screenWidth / 7 : widget.screenWidth /
-                                    11,
+                                fontSize: widget.screenWidth < 800 ? widget.screenWidth / 7 : widget.screenWidth / 11,
                                 color: Colors.redAccent.shade400,
                                 shadows: [
                                   Shadow(color: Colors.black.withOpacity(0.9), offset: Offset(4, 4), blurRadius: 10),
@@ -161,10 +172,10 @@ class _GradientBackgroundState extends State<GradientBackground> {
                         ),
                       ],
                     ),
-                    SizedBox(width: widget.screenWidth/20,), // немного отступа между текстом и картинкой
+                    SizedBox(width: widget.screenWidth / 20), // немного отступа между текстом и картинкой
                     Container(
-                      height: widget.screenWidth/3.5,
-                      width: widget.screenWidth/3.5,
+                      height: widget.screenWidth / 3.5,
+                      width: widget.screenWidth / 3.5,
                       decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
