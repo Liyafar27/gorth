@@ -150,7 +150,7 @@ class InfoCTO extends StatelessWidget {
             'CTO \$GORTH',
             style: TextStyle(
               fontFamily: 'Adigiana',
-              fontSize: 32,
+              fontSize: 33,
               color: Colors.white,
               shadows: [Shadow(color: Colors.black.withOpacity(0.6), offset: Offset(2, 2), blurRadius: 4)],
             ),
@@ -162,7 +162,7 @@ class InfoCTO extends StatelessWidget {
             '\$ANDY, and \$LANDWOLF.',
             style: TextStyle(
               fontFamily: 'Adigiana',
-              fontSize: 22,
+              fontSize: 30,
               color: Colors.redAccent.shade400,
               shadows: [Shadow(color: Colors.black.withOpacity(0.6), offset: Offset(2, 2), blurRadius: 4)],
             ),
