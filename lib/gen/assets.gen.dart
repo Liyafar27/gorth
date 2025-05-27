@@ -66,6 +66,7 @@ class Assets {
   static const AssetGenImage a7 = AssetGenImage('assets/7.jpeg');
   static const AssetGenImage a8 = AssetGenImage('assets/8.jpeg');
   static const AssetGenImage a9 = AssetGenImage('assets/9.jpeg');
+  static const String animation1 = 'assets/animation1.json';
   static const AssetGenImage f1 = AssetGenImage('assets/f1.png');
   static const AssetGenImage f2 = AssetGenImage('assets/f2.png');
   static const AssetGenImage f3 = AssetGenImage('assets/f3.png');
@@ -132,6 +133,7 @@ class Assets {
     a7,
     a8,
     a9,
+    animation1,
     f1,
     f2,
     f3,

@@ -1,5 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:gorth/gen/assets.gen.dart';
+import 'package:gorth/src/browser_utils_html.dart';
 import 'package:gorth/zoom_image.dart';
 
 class InfoSection extends StatelessWidget {
@@ -11,6 +13,13 @@ class InfoSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final String text = r'''  
+Unleash the chaos. \$GORTH, birthed on Solana, channels the raw, untamed spirit of Gorth—Matt Furie’s cryptic creation from the forthcoming Cortex Vortex. This isn’t just a memecoin; it’s a primal force, a middle finger to the mundane, forged for degens who thrive in the wilds of risk and rebellion.  
+  
+Launched 10 months ago as the first Gorth contract on any blockchain, this organic CTO emerged from the gritty depths of Pump Fun, sculpted by a rogue alliance of visionaries. \$GORTH isn’t chasing trends—it’s carving its own legend, poised to echo the meteoric rise of Furie’s giants like \$PEPE, \$BRETT, \$ANDY, and \$LANDWOLF.  
+  
+Whispers in the shadows speak of a moonshot. A sub-100k gem with the potential for a 100–1000x surge. The community is a cult of chaos, united, relentless, and ready to ascend. Will you join the uprising or watch from the sidelines?
+''';
     return Container(
       padding: const EdgeInsets.all(40),
       color: color,
@@ -18,25 +27,94 @@ class InfoSection extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            '\$GORTH by Matt Furie',
+            '\$GORTH by Matt Furie 6CrzZFNYccQ5DQL8UqKuwNowh3zsWD5RNTs1GZbApump',
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontFamily: 'Adigiana',
-              fontSize: 32,
+              fontSize: 33,
               color: Colors.white,
               shadows: [Shadow(color: Colors.black.withOpacity(0.6), offset: Offset(2, 2), blurRadius: 4)],
             ),
           ),
+          SizedBox(height: 8),
           Text(
-            '\$GORTH is a memecoin on SOL inspired by #Gorth - a character featured in Matt Furie’s upcoming book '
-            '#Cortex Vortex. The narrative positions Gorth as a symbol of chaos and defiance, resonating with Degens who embrace risk and internet culture.',
+            text,
             style: TextStyle(
               fontFamily: 'Adigiana',
-              fontSize: 22,
+              fontSize: 30,
               color: Colors.redAccent.shade400,
               shadows: [Shadow(color: Colors.black.withOpacity(0.6), offset: Offset(2, 2), blurRadius: 4)],
             ),
           ),
-          SizedBox(height: 16),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: RichText(
+              textAlign: TextAlign.left,
+              text: TextSpan(
+                style: TextStyle(
+                  fontFamily: 'Adigiana',
+                  fontSize: 30,
+                  color: Colors.redAccent.shade400,
+                  shadows: [Shadow(color: Colors.black.withOpacity(0.6), offset: Offset(2, 2), blurRadius: 4)],
+                ),
+                children: [
+                  const TextSpan(text: '🌐 Dive in: '),
+                  TextSpan(
+                    text: 'https://www.gorthsol.xyz/\n',
+                    style: const TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
+                    recognizer: TapGestureRecognizer()..onTap = () => openUrl('https://www.gorthsol.xyz/'),
+                  ),
+                  const TextSpan(text: '💬 Conspire: '),
+                  TextSpan(
+                    text: 'https://t.me/OG_Gorth_Solana\n',
+                    style: const TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
+                    recognizer: TapGestureRecognizer()..onTap = () => openUrl('https://t.me/OG_Gorth_Solana'),
+                  ),
+                  const TextSpan(text: '🖤 Join the rebellion: '),
+                  TextSpan(
+                    text: 'https://x.com/i/communities/1923786151607091641\n\n',
+                    style: const TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
+                    recognizer:
+                        TapGestureRecognizer()
+                          ..onTap = () => openUrl('https://x.com/i/communities/1923786151607091641'),
+                  ),
+                  TextSpan(
+                    text: '🚀 Ignite on Dexscreener.\n',
+                    recognizer:
+                        TapGestureRecognizer()
+                          ..onTap =
+                              () => openUrl(
+                                'https://dexscreener.com/solana/25ismnrftdomckrydjgicrrwet5wrb3pxburn89nr73l',
+                              ),
+                  ),
+                  TextSpan(text: '🗳️ Cast your vote on '),
+                  TextSpan(
+                    text: ' Coinhunt & ',
+                    style: const TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
+                    recognizer:
+                        TapGestureRecognizer()
+                          ..onTap = () => openUrl('https://coinhunt.cc/coin/683385e0f3b2fcf77f489169'),
+                  ),
+                  TextSpan(
+                    text: 'Lewk.\n\n',
+                    style: const TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
+                    recognizer:
+                        TapGestureRecognizer()
+                          ..onTap =
+                              () => openUrl(
+                                'https://lewk.com/vote/6CrzZFNYccQ5DQL8UqKuwNowh3zsWD5RNTs1GZbApump?otp=tan9vv9u5xa5hn8n',
+                              ),
+                  ),
+                  const TextSpan(
+                    text: '\$GORTH. Defy. Disrupt. Dominate.\n',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  const TextSpan(text: '🖕😈🖕', style: const TextStyle(fontSize: 40)),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(height: 32),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -211,39 +289,52 @@ class _LFGDEXState extends State<LFGDEX> {
               child: Stack(
                 children: [
                   Transform.scale(
-                    scale:widget.screenWidth < 600?1.0: 1.13, // увеличиваем немного
+                    scale: widget.screenWidth < 600 ? 1.0 : 1.13, // увеличиваем немного
                     child: Transform.translate(
                       offset: Offset(_offset.dx * 0.02, _offset.dy * 0.02),
-                      child: SizedBox.expand(child: Image.asset(Assets.f44.path, fit:widget.screenWidth < 600
-                          ?BoxFit.fitHeight:BoxFit.fill,          height: widget.screenWidth < 600 ? 400+widget
-                          .screenWidth/10:450+widget.screenWidth/10,
-                      )),
+                      child: SizedBox.expand(
+                        child: Image.asset(
+                          Assets.f44.path,
+                          fit: widget.screenWidth < 600 ? BoxFit.fitHeight : BoxFit.fill,
+                          height:
+                              widget.screenWidth < 600 ? 400 + widget.screenWidth / 10 : 450 + widget.screenWidth / 10,
+                        ),
+                      ),
                     ),
                   ),
                   Transform.scale(
-                    scale: widget.screenWidth < 600?1.0:1.15, // увеличиваем немного
+                    scale: widget.screenWidth < 600 ? 1.0 : 1.15, // увеличиваем немного
                     child: Transform.translate(
                       offset: Offset(_offset.dx * 0.04, _offset.dy * 0.04),
-                      child: SizedBox.expand(child: Image.asset(Assets.f6.path, fit: widget.screenWidth < 600
-                          ?BoxFit.fitHeight:BoxFit.cover,        height: widget.screenWidth < 600 ? 400+widget
-                          .screenWidth/10:450+widget.screenWidth/10,
-                      )),
+                      child: SizedBox.expand(
+                        child: Image.asset(
+                          Assets.f6.path,
+                          fit: widget.screenWidth < 600 ? BoxFit.fitHeight : BoxFit.cover,
+                          height:
+                              widget.screenWidth < 600 ? 400 + widget.screenWidth / 10 : 450 + widget.screenWidth / 10,
+                        ),
+                      ),
                     ),
                   ),
 
                   Transform.scale(
-                    scale:widget.screenWidth < 600?1.0: 1.22, // увеличиваем немного
+                    scale: widget.screenWidth < 600 ? 1.0 : 1.22, // увеличиваем немного
                     child: Transform.translate(
                       offset: Offset(_offset.dx * 0.06, _offset.dy * 0.06),
-                      child: SizedBox.expand(child: Image.asset(Assets.f5.path,  fit:widget.screenWidth < 600
-                          ?BoxFit.fitHeight:BoxFit.cover,       height: widget
-                          .screenWidth < 600 ? 400+widget.screenWidth/10:450+widget.screenWidth/10,
-                      )),
+                      child: SizedBox.expand(
+                        child: Image.asset(
+                          Assets.f5.path,
+                          fit: widget.screenWidth < 600 ? BoxFit.fitHeight : BoxFit.cover,
+                          height:
+                              widget.screenWidth < 600 ? 400 + widget.screenWidth / 10 : 450 + widget.screenWidth / 10,
+                        ),
+                      ),
                     ),
                   ),
-                 ],
+                ],
               ),
-            ),            Column(
+            ),
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Row(
