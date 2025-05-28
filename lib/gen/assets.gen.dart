@@ -67,6 +67,7 @@ class Assets {
   static const AssetGenImage a8 = AssetGenImage('assets/8.jpeg');
   static const AssetGenImage a9 = AssetGenImage('assets/9.jpeg');
   static const String animation1 = 'assets/animation1.json';
+  static const AssetGenImage dextools = AssetGenImage('assets/dextools.png');
   static const AssetGenImage f1 = AssetGenImage('assets/f1.png');
   static const AssetGenImage f2 = AssetGenImage('assets/f2.png');
   static const AssetGenImage f3 = AssetGenImage('assets/f3.png');
@@ -74,6 +75,7 @@ class Assets {
   static const AssetGenImage f44 = AssetGenImage('assets/f44.png');
   static const AssetGenImage f5 = AssetGenImage('assets/f5.png');
   static const AssetGenImage f6 = AssetGenImage('assets/f6.png');
+  static const AssetGenImage moontook = AssetGenImage('assets/moontook.png');
   static const String tg = 'assets/tg.svg';
   static const String x = 'assets/x.svg';
 
@@ -134,6 +136,7 @@ class Assets {
     a8,
     a9,
     animation1,
+    dextools,
     f1,
     f2,
     f3,
@@ -141,6 +144,7 @@ class Assets {
     f44,
     f5,
     f6,
+    moontook,
     tg,
     x,
   ];

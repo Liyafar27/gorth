@@ -78,8 +78,11 @@ Whispers in the shadows speak of a moonshot. A sub-100k gem with the potential f
                         TapGestureRecognizer()
                           ..onTap = () => openUrl('https://x.com/i/communities/1923786151607091641'),
                   ),
+                  TextSpan(text: '🚀 Ignite on '),
                   TextSpan(
-                    text: '🚀 Ignite on Dexscreener.\n',
+                    text: 'Dexscreener.\n',
+                    style: const TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
+
                     recognizer:
                         TapGestureRecognizer()
                           ..onTap =
@@ -89,14 +92,16 @@ Whispers in the shadows speak of a moonshot. A sub-100k gem with the potential f
                   ),
                   TextSpan(text: '🗳️ Cast your vote on '),
                   TextSpan(
-                    text: ' Coinhunt & ',
+                    text: ' Coinhunt ',
                     style: const TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
                     recognizer:
                         TapGestureRecognizer()
                           ..onTap = () => openUrl('https://coinhunt.cc/coin/683385e0f3b2fcf77f489169'),
                   ),
+                  TextSpan(text: ' & '),
+
                   TextSpan(
-                    text: 'Lewk.\n\n',
+                    text: 'Lewk.',
                     style: const TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
                     recognizer:
                         TapGestureRecognizer()
@@ -105,15 +110,76 @@ Whispers in the shadows speak of a moonshot. A sub-100k gem with the potential f
                                 'https://lewk.com/vote/6CrzZFNYccQ5DQL8UqKuwNowh3zsWD5RNTs1GZbApump?otp=tan9vv9u5xa5hn8n',
                               ),
                   ),
-                  const TextSpan(
-                    text: '\$GORTH. Defy. Disrupt. Dominate.\n',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  const TextSpan(text: '🖕😈🖕', style: const TextStyle(fontSize: 40)),
                 ],
               ),
             ),
           ),
+
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Assets.dextools.image(height: 50),
+              RichText(
+                textAlign: TextAlign.left,
+                text: TextSpan(
+                  style: TextStyle(
+                    fontFamily: 'Adigiana',
+                    fontSize: 30,
+                    color: Colors.redAccent.shade400,
+                    shadows: [Shadow(color: Colors.black.withOpacity(0.6), offset: Offset(2, 2), blurRadius: 4)],
+                  ),
+                  children: [
+                    // TextSpan(
+                    //   text: 'We on ',
+                    // ),
+                    TextSpan(
+                      text: 'DEXTools',
+                      style: const TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
+                      recognizer:
+                          TapGestureRecognizer()
+                            ..onTap =
+                                () => openUrl(
+                                  'https://www.dextools.io/app/en/solana/pair-explorer/25isMnRfTDomCkRydjgiCrRwET5wRb3pxbuRn89Nr73L?t=1748421380523',
+                                ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Assets.moontook.image(height: 50),
+              RichText(
+                textAlign: TextAlign.left,
+                text: TextSpan(
+                  style: TextStyle(
+                    fontFamily: 'Adigiana',
+                    fontSize: 30,
+                    color: Colors.redAccent.shade400,
+                    shadows: [Shadow(color: Colors.black.withOpacity(0.6), offset: Offset(2, 2), blurRadius: 4)],
+                  ),
+                  children: [
+                    // TextSpan(
+                    //   text: 'We on ',
+                    // ),
+                    TextSpan(
+                      text: ' Moontok\n',
+                      style: const TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
+                      recognizer: TapGestureRecognizer()..onTap = () => openUrl('https://moontok.io/coins/gorth-1'),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+
+          Text(
+            '\$GORTH. Defy. Disrupt. Dominate.',
+            style: TextStyle(fontSize: 40, fontFamily: 'Adigiana', color: Colors.redAccent.shade400),
+          ),
+          Text('🖕😈🖕', style: TextStyle(fontSize: 40, fontFamily: 'Adigiana', color: Colors.redAccent.shade400)),
           SizedBox(height: 32),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

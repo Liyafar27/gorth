@@ -46,35 +46,94 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.black87,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Row(
-          children: [
-            TextButton(
-              onPressed: () => _scrollToSection(aboutKey),
-              child: Text(
-                '\$GORTH by Matt Furie',
-                style: TextStyle(
-                  fontFamily: 'Adigiana',
-                  fontSize: screenWidth < 800 ? screenWidth / 25 : screenWidth / 40,
-                  color: Colors.white,
-                  shadows: [Shadow(color: Colors.black.withOpacity(0.6), offset: Offset(2, 2), blurRadius: 4)],
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: AppBar(
+          backgroundColor: Colors.black,
+
+          title:Padding(
+            padding: const EdgeInsets.only(top: 10.0,bottom: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              // 👈 выравнивание вправо
+              children: [
+                Wrap(
+                    spacing:screenWidth < 800 ?5: 15, // ← расстояние между кнопками
+                    children: [
+                    TextButton(
+                      style: TextButton.styleFrom(padding: EdgeInsets.zero),
+
+                      onPressed: () => _scrollToSection(aboutKey),
+                      child: Text(
+                        '\$GORTH by Matt Furie',
+                        style: TextStyle(
+                          fontFamily: 'Adigiana',
+                          fontSize: screenWidth < 800 ? screenWidth / 25 : screenWidth / 40,
+                          color: Colors.white,
+                          shadows: [Shadow(color: Colors.black.withOpacity(0.6), offset: Offset(2, 2), blurRadius: 4)],
+                        ),
+                      ),
+                    ),
+                      SizedBox(width:  screenWidth <
+                          800 ? screenWidth / 33+16 : screenWidth / 38+16,
+                        child: TextButton(
+                          style: TextButton.styleFrom(padding: EdgeInsets.zero,backgroundColor:  Colors.redAccent.shade400),
+
+                          onPressed: () => openUrl("https://x.com/gorth_on_sol"),
+
+                      child:  Text('𝕏', style: TextStyle(fontFamily: 'Adigiana',     shadows: [
+                      Shadow(
+                      color: Colors.black,
+                        offset: Offset(2, 2),
+                        blurRadius: 4,
+                      ),],                fontSize: screenWidth <
+                          800 ? screenWidth / 35 : screenWidth / 40,
+                           color: Colors.white)),
+                    ),),
+                    SizedBox(width:  screenWidth <
+                        800 ? screenWidth / 33+16 : screenWidth / 38+16,
+                      child: TextButton(
+                        style: TextButton.styleFrom(padding: EdgeInsets.zero,backgroundColor:  Colors.cyanAccent),
+
+                        onPressed: () => openUrl('https://t.me/OG_Gorth_Solana'),
+                        child:  Text('Tg', style: TextStyle(fontFamily: 'Adigiana',      shadows: [
+                          Shadow(
+                            color: Colors.black,
+                            offset: Offset(2, 2),
+                            blurRadius: 4,
+                          ),],                   fontSize: screenWidth <
+                            800 ? screenWidth / 35 : screenWidth / 40,
+                            color: Colors.white)),
+                      ),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(padding: EdgeInsets.zero),
+                      onPressed: () => openUrl('https://dexscreener.com/solana/25isMnRfTDomCkRydjgiCrRwET5wRb3pxbuRn89Nr73L'),
+                      child:  Text('DEX', style: TextStyle(fontFamily: 'Adigiana',                   fontSize: screenWidth <
+                          800 ? screenWidth / 35 : screenWidth / 40,
+                          color: Colors.white)),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(padding: EdgeInsets.zero),
+                      onPressed: () => openUrl('https://www.dextools.io/app/en/solana/pair-explorer/25isMnRfTDomCkRydjgiCrRwET5wRb3pxbuRn89Nr73L?t=1748421380523'),
+                      child:  Text('DEXTools', style: TextStyle(fontFamily: 'Adigiana',                   fontSize:
+                      screenWidth < 800 ? screenWidth / 35 : screenWidth / 40,
+                          color: Colors
+                          .white)),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(padding: EdgeInsets.zero),
+                      onPressed: () => openUrl('https://moontok.io/coins/gorth-1'),
+                      child:  Text('MoonTok', style: TextStyle(fontFamily: 'Adigiana',                  fontSize: screenWidth
+                          < 800 ? screenWidth / 35 : screenWidth / 40,
+                          color: Colors
+                          .white)),
+                    ),
+                  ],
                 ),
-              ),
+              ],
             ),
-            TextButton(
-              onPressed: () => openUrl("https://x.com/gorth_on_sol"),
-              child: const Text('𝕏', style: TextStyle(fontFamily: 'Adigiana', fontSize: 25, color: Colors.white)),
-            ),
-            TextButton(
-              onPressed: () => openUrl('https://t.me/OG_Gorth_Solana'),
-              child: const Text('Tg', style: TextStyle(fontFamily: 'Adigiana', fontSize: 25, color: Colors.white)),
-            ),
-            TextButton(
-              onPressed: () => openUrl('https://dexscreener.com/solana/25isMnRfTDomCkRydjgiCrRwET5wRb3pxbuRn89Nr73L'),
-              child: const Text('Dex', style: TextStyle(fontFamily: 'Adigiana', fontSize: 25, color: Colors.white)),
-            ),
-          ],
+          ),
         ),
       ),
       body: SingleChildScrollView(
