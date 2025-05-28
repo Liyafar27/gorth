@@ -15,12 +15,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-
-      title: '\$GORTH',
-      home: const HomePage(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, title: '\$GORTH', home: const HomePage());
   }
 }
 
@@ -51,15 +46,15 @@ class HomePage extends StatelessWidget {
         child: AppBar(
           backgroundColor: Colors.black,
 
-          title:Padding(
-            padding: const EdgeInsets.only(top: 10.0,bottom: 10),
+          title: Padding(
+            padding: const EdgeInsets.only(top: 10.0, bottom: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               // 👈 выравнивание вправо
               children: [
                 Wrap(
-                    spacing:screenWidth < 800 ?5: 15, // ← расстояние между кнопками
-                    children: [
+                  spacing: screenWidth < 800 ? 5 : 15, // ← расстояние между кнопками
+                  children: [
                     TextButton(
                       style: TextButton.styleFrom(padding: EdgeInsets.zero),
 
@@ -74,60 +69,83 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                      SizedBox(width:  screenWidth <
-                          800 ? screenWidth / 33+16 : screenWidth / 38+16,
-                        child: TextButton(
-                          style: TextButton.styleFrom(padding: EdgeInsets.zero,backgroundColor:  Colors.redAccent.shade400),
-
-                          onPressed: () => openUrl("https://x.com/gorth_on_sol"),
-
-                      child:  Text('𝕏', style: TextStyle(fontFamily: 'Adigiana',     shadows: [
-                      Shadow(
-                      color: Colors.black,
-                        offset: Offset(2, 2),
-                        blurRadius: 4,
-                      ),],                fontSize: screenWidth <
-                          800 ? screenWidth / 35 : screenWidth / 40,
-                           color: Colors.white)),
-                    ),),
-                    SizedBox(width:  screenWidth <
-                        800 ? screenWidth / 33+16 : screenWidth / 38+16,
+                    SizedBox(
+                      width: screenWidth < 800 ? screenWidth / 33 + 16 : screenWidth / 38 + 16,
                       child: TextButton(
-                        style: TextButton.styleFrom(padding: EdgeInsets.zero,backgroundColor:  Colors.cyanAccent),
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.zero,
+                          backgroundColor: Colors.redAccent.shade400,
+                        ),
+
+                        onPressed: () => openUrl("https://x.com/gorth_on_sol"),
+
+                        child: Text(
+                          '𝕏',
+                          style: TextStyle(
+                            fontFamily: 'Adigiana',
+                            shadows: [Shadow(color: Colors.black, offset: Offset(2, 2), blurRadius: 4)],
+                            fontSize: screenWidth < 800 ? screenWidth / 35 : screenWidth / 40,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: screenWidth < 800 ? screenWidth / 33 + 16 : screenWidth / 38 + 16,
+                      child: TextButton(
+                        style: TextButton.styleFrom(padding: EdgeInsets.zero, backgroundColor: Colors.cyanAccent),
 
                         onPressed: () => openUrl('https://t.me/OG_Gorth_Solana'),
-                        child:  Text('Tg', style: TextStyle(fontFamily: 'Adigiana',      shadows: [
-                          Shadow(
-                            color: Colors.black,
-                            offset: Offset(2, 2),
-                            blurRadius: 4,
-                          ),],                   fontSize: screenWidth <
-                            800 ? screenWidth / 35 : screenWidth / 40,
-                            color: Colors.white)),
+                        child: Text(
+                          'Tg',
+                          style: TextStyle(
+                            fontFamily: 'Adigiana',
+                            shadows: [Shadow(color: Colors.black, offset: Offset(2, 2), blurRadius: 4)],
+                            fontSize: screenWidth < 800 ? screenWidth / 35 : screenWidth / 40,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
                     ),
                     TextButton(
                       style: TextButton.styleFrom(padding: EdgeInsets.zero),
-                      onPressed: () => openUrl('https://dexscreener.com/solana/25isMnRfTDomCkRydjgiCrRwET5wRb3pxbuRn89Nr73L'),
-                      child:  Text('DEX', style: TextStyle(fontFamily: 'Adigiana',                   fontSize: screenWidth <
-                          800 ? screenWidth / 35 : screenWidth / 40,
-                          color: Colors.white)),
+                      onPressed:
+                          () => openUrl('https://dexscreener.com/solana/25isMnRfTDomCkRydjgiCrRwET5wRb3pxbuRn89Nr73L'),
+                      child: Text(
+                        'DEX',
+                        style: TextStyle(
+                          fontFamily: 'Adigiana',
+                          fontSize: screenWidth < 800 ? screenWidth / 35 : screenWidth / 40,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                     TextButton(
                       style: TextButton.styleFrom(padding: EdgeInsets.zero),
-                      onPressed: () => openUrl('https://www.dextools.io/app/en/solana/pair-explorer/25isMnRfTDomCkRydjgiCrRwET5wRb3pxbuRn89Nr73L?t=1748421380523'),
-                      child:  Text('DEXTools', style: TextStyle(fontFamily: 'Adigiana',                   fontSize:
-                      screenWidth < 800 ? screenWidth / 35 : screenWidth / 40,
-                          color: Colors
-                          .white)),
+                      onPressed:
+                          () => openUrl(
+                            'https://www.dextools.io/app/en/solana/pair-explorer/25isMnRfTDomCkRydjgiCrRwET5wRb3pxbuRn89Nr73L?t=1748421380523',
+                          ),
+                      child: Text(
+                        'DEXTools',
+                        style: TextStyle(
+                          fontFamily: 'Adigiana',
+                          fontSize: screenWidth < 800 ? screenWidth / 35 : screenWidth / 40,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                     TextButton(
                       style: TextButton.styleFrom(padding: EdgeInsets.zero),
                       onPressed: () => openUrl('https://moontok.io/coins/gorth-1'),
-                      child:  Text('MoonTok', style: TextStyle(fontFamily: 'Adigiana',                  fontSize: screenWidth
-                          < 800 ? screenWidth / 35 : screenWidth / 40,
-                          color: Colors
-                          .white)),
+                      child: Text(
+                        'MoonTok',
+                        style: TextStyle(
+                          fontFamily: 'Adigiana',
+                          fontSize: screenWidth < 800 ? screenWidth / 35 : screenWidth / 40,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ],
                 ),
